@@ -4,19 +4,19 @@ A decentralized, infrastructure-free, peer-to-peer mobile mesh communication pro
 
 ---
 
-## ⚡ Current Project Status: Research & Core Architecture Phase
+##  Current Project Status: Research & Core Architecture Phase
 This repository is currently in **Phase 0: R&D and Transport Layer Physics Testing**. 
 Before writing any user interface layers, the focus is strictly on testing direct baseline functionality: manipulating the underlying hardware chipsets to transmit, hop, and validate raw byte streams directly across the airwaves completely offline.
 
 ---
 
-## 🎯 Primary Objective (The Baseline Test)
+##  Primary Objective (The Baseline Test)
 The immediate technical milestone of this project is to execute a **Zero-Network 10-Byte Array Transmission Test**. 
 * **The Mission:** Successfully pass a raw 10-character binary string packet directly from Device A to Device B over local 2.4 GHz radio waves without any central internet gateway, Wi-Fi router connectivity, cellular towers, or Layer 3 IP address allocations.
 
 ---
 
-## 🩻 High-Level Protocol Architecture
+##  High-Level Protocol Architecture
 To maximize battery preservation and runtime performance under heavy processing states, the utility follows a strict **95% Performance / 5% Minimalist UI** design philosophy. Flashy animations are completely excluded to protect local network chips and device thermal limits.
 
 ### 1. The Discovery & Control Plane (Flutter / Dart)
@@ -32,7 +32,7 @@ To maximize battery preservation and runtime performance under heavy processing 
 
 ---
 
-## 📂 Repository Directory Blueprint
+##  Repository Directory Blueprint
 To prevent messy developmental scratchpads from cluttering production deployment streams, the repository layout utilizes targeted tracking blocks:
 
 * `main.dart` -> The core platform-independent user interface framework shell (Text-only minimalist console layout).
@@ -40,5 +40,5 @@ To prevent messy developmental scratchpads from cluttering production deployment
 
 ---
 
-## 🛠️ How to Track Development
+##  How to Track Development
 Every technical milestone, protocol flow chart diagram, data frame ledger log, and physical hardware validation proof will be continuously updated live inside this document as the system transitions from raw antenna discovery tests into full ad-hoc network routing execution lines.
