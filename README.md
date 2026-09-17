@@ -1,7 +1,7 @@
 # Project SYNAPSE 📡
 
 ### Why I Am Building This (The Backstory)
-I am Jattin, a 5th-semester BCA student from a normal college in India. I got into this because of raw curiosity. I hated blindly typing Linux commands without knowing what they did under the hood, which led me to build a basic network scanner in Python. 
+I am Jattin, a 5th-semester BCA student from a Kurukshetra university in India. I got into this because of raw curiosity. I hated blindly typing Linux commands without knowing what they did under the hood, so which made me curious about the security threats like if i type a command can it make someone connect to my device remotely and like that when i was studying in college about backend and there was a concept that sometimes web developers leaves the backdoor on a server to get into website, so I wanted to know and find out about open port on a netwrok. I didn't know pyhton till that date which led me to build a basic network scanner in Python. 
 
 Then I saw corporate telecom monopolies spiking mobile internet recharge prices (like ₹299/₹399). It made me think: *What happens if the entire network infrastructure goes down during an emergency or disaster? How can we connect using what we already own?* 
 
@@ -9,7 +9,7 @@ That's why I am building Project SYNAPSE—a decentralized, completely offline m
 
 ### My Starting Point (Zero Sugarcoating)
 As of September 2026, I am a beginner. 
-- I only know college-level C++ (mostly old Turbo C++ concepts).
+- I only know college-level C++ (mostly old Turbo C++ and oop concepts).
 - I have **zero** prior experience with Dart or Flutter.
 - I have **zero** experience with low-level memory management.
 
