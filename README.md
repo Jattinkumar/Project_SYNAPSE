@@ -1,44 +1,24 @@
-# Project Synapse (Research & Architecture Phase)
+# Project SYNAPSE 📡
 
-A decentralized, infrastructure-free, peer-to-peer mobile mesh communication protocol designed for off-grid and resource-constrained environments.
+### Why I Am Building This (The Backstory)
+I am Jattin, a 5th-semester BCA student from a normal college in India. I got into this because of raw curiosity. I hated blindly typing Linux commands without knowing what they did under the hood, which led me to build a basic network scanner in Python. 
 
----
+Then I saw corporate telecom monopolies spiking mobile internet recharge prices (like ₹299/₹399). It made me think: *What happens if the entire network infrastructure goes down during an emergency or disaster? How can we connect using what we already own?* 
 
-##  Current Project Status: Research & Core Architecture Phase
-This repository is currently in **Phase 0: R&D and Transport Layer Physics Testing**. 
-Before writing any user interface layers, the focus is strictly on testing direct baseline functionality: manipulating the underlying hardware chipsets to transmit, hop, and validate raw byte streams directly across the airwaves completely offline.
+That's why I am building Project SYNAPSE—a decentralized, completely offline messaging engine that uses Bluetooth Low Energy (BLE) to bounce messages from phone to phone (ad-hoc mesh) without cell towers or internet.
 
----
+### My Starting Point (Zero Sugarcoating)
+As of September 2026, I am a beginner. 
+- I only know college-level C++ (mostly old Turbo C++ concepts).
+- I have **zero** prior experience with Dart or Flutter.
+- I have **zero** experience with low-level memory management.
 
-##  Primary Objective (The Baseline Test)
-The immediate technical milestone of this project is to execute a **Zero-Network 10-Byte Array Transmission Test**. 
-* **The Mission:** Successfully pass a raw 10-character binary string packet directly from Device A to Device B over local 2.4 GHz radio waves without any central internet gateway, Wi-Fi router connectivity, cellular towers, or Layer 3 IP address allocations.
+I am not copying a tutorial. I am learning the systems engineering concepts step-by-step from scratch, breaking things on purpose, and documenting the journey here. My goal is to have a working prototype across my two Samsung test devices by January 2027.
 
----
-
-##  High-Level Protocol Architecture
-To maximize battery preservation and runtime performance under heavy processing states, the utility follows a strict **95% Performance / 5% Minimalist UI** design philosophy. Flashy animations are completely excluded to protect local network chips and device thermal limits.
-
-### 1. The Discovery & Control Plane (Flutter / Dart)
-* Handles native background Bluetooth Low Energy (BLE) Peripheral Advertising and Central Scanning.
-* Maps custom Service and Characteristic UUID slots directly inside the host operating system's native kernel space.
-* Functions as the local antenna driver to intercept incoming raw radio frames out of the air.
-
-### 2. The Logic Router Core (C++ Backend)
-* Intercepts the raw data streams captured by the Dart antenna layer via high-speed, zero-latency **Dart FFI (Foreign Function Interface)** memory pipes.
-* Manages ad-hoc in-memory Routing Tables to dynamically calculate hop paths between changing physical device locations.
-* Enforces strict End-to-End Encryption (E2EE) using native public/private key structures generated inside volatile memory.
-* Employs tight input character sanitization to scrub raw text streams and drop malicious executable code blocks instantly.
-
----
-
-##  Repository Directory Blueprint
-To prevent messy developmental scratchpads from cluttering production deployment streams, the repository layout utilizes targeted tracking blocks:
-
-* `main.dart` -> The core platform-independent user interface framework shell (Text-only minimalist console layout).
-* `mesh_engine.cpp` -> The primary high-performance decentralized mesh routing logic engine.
-
----
-
-##  How to Track Development
-Every technical milestone, protocol flow chart diagram, data frame ledger log, and physical hardware validation proof will be continuously updated live inside this document as the system transitions from raw antenna discovery tests into full ad-hoc network routing execution lines.
+### 🗺️ The Learning Roadmap & Progress
+- [x] Set up my C++ compiler environment inside VS Code on my Ryzen 7 laptop.
+- [ ] Phase 1: Master low-level C++ memory pointers, raw arrays, and bit-shifting.
+- [ ] Phase 2: Build the core mesh logic (packet data serialization and duplicate loop prevention).
+- [ ] Phase 3: Learn Dart FFI to bridge C++ logic to a mobile application framework.
+- [ ] Phase 4: Learn Flutter BLE APIs and build the Android Foreground Service to bypass background kills.
+- [ ] Phase 5: Off-grid field testing with physical Samsung devices.

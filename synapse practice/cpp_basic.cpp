@@ -1,19 +1,21 @@
-#include <iostream>
-#include <vector>
-#include <cstdint>
-
+#include<iostream>
+using namespace std;
 int main()
 {
-    std::vector<uint8_t>buffer(20,0);
+    struct packet
+    {
+        unsigned short device_id = 100; /*100 is just for example*/
+        unsigned char device_status = 0;      /*just for refrencing*/
+        unsigned char payload[5]={'H','E','L','P','!'};
+        unsigned char checksum=0;
+    };
+    packet mypacket;
+    unsigned char* byte_ptr=(unsigned char*)&mypacket;
+    cout<<"--- SYNAPSE WORKING ---\n";
+    cout<<"Size taken by packet in RAM: "<<sizeof(mypacket)<<" Bytes"<<endl;
+    cout<<"[*] First index or first value at 0: "<<(int)byte_ptr[0]<<"\n"<<endl;
+    cout<<"[*] First index or first value at 2: "<<(int)byte_ptr[2]<<"\n"<<endl;
+    cout<<"[*] First index or first value at 3: "<<(int)byte_ptr[3]<<"\n"<<endl;
 
-    uint8_t* start_ptr=buffer.data();
-    *start_ptr=89;
-    *(start_ptr+1)=90;
-    *(start_ptr+2)=91;
-    std::cout<<"[+] starting address (index 0): "<<(void*)start_ptr<< std::endl;
-    std::cout<<"[*] Value inside 1stbox: "<<(int)buffer[0]<<std::endl;
-     std::cout<<"[*] Value inside 2ndbox: "<<(int)buffer[1]<<std::endl;
-      std::cout<<"[*] Value inside 3rdbox: "<<(int)buffer[2]<<std::endl;
-    std::cout<<"[+] jump 4 bytes ahead address: "<< (void*)(start_ptr +4)<< std::endl;
     return 0;
 }
