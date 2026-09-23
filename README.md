@@ -22,3 +22,16 @@ I am not copying a tutorial. I am learning the systems engineering concepts step
 - [ ] Phase 3: Learn Dart FFI to bridge C++ logic to a mobile application framework.
 - [ ] Phase 4: Learn Flutter BLE APIs and build the Android Foreground Service to bypass background kills.
 - [ ] Phase 5: Off-grid field testing with physical Samsung devices.
+
+
+### 📶 Log 02: Volatile Memory Extraction & Character De-Abstraction
+*   **Date:** September 23, 2026
+*   **Objective:** Force the host 64-bit architecture to strip away human-readable text layers and reveal the raw numerical integer bytes sitting inside our structure's memory array.
+*   **The Problem:** Low-level network validation loops (like Bitwise XOR Checksums) cannot execute on standard text characters. To prepare for data integrity testing, the compiler must be shown how to access memory boxes directly as raw positive numbers.
+*   **Doubts Confronted:** Overcame severe contextual paralysis regarding modern C++ compilation syntax vs. legacy 1990 Turbo C++ mechanics. Dismantled academic misconceptions regarding compiler data storage limitations (Signed vs. Unsigned memory bit allocation).
+*   **The Breakthrough:** Independently established a dynamic `for` loop that iterates sequentially through the structural data fields of `mypacket.message`. Successfully extracted the raw electrical ASCII signatures live from the hardware cells:
+    *   Slot 1 ('H') ➔ Integer Value: **72**
+    *   Slot 2 ('E') ➔ Integer Value: **69**
+    *   Slot 3 ('L') ➔ Integer Value: **76**
+    *   Slot 4 ('P') ➔ Integer Value: **80**
+    *   Slot 5 ('!') ➔ Integer Value: **33**
