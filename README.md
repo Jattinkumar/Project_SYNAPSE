@@ -35,3 +35,14 @@ I am not copying a tutorial. I am learning the systems engineering concepts step
     *   Slot 3 ('L') ➔ Integer Value: **76**
     *   Slot 4 ('P') ➔ Integer Value: **80**
     *   Slot 5 ('!') ➔ Integer Value: **33**
+
+### 📝 Log 03: Fixing Hidden Memory Gaps & Verifying Code Math
+*   **Date:** September 26, 2026
+*   **My Objective:** Stop the computer from adding empty space inside our data layout and make sure our math loop calculates the exact correct verification number.
+*   **The Problem I Faced:** The computer was secretly adding empty tracking bytes inside our structure to match its 64-bit hardware systems. Because of these hidden spaces, my code loop accidentally read wrong numbers from the next door variables in RAM. This corrupted my final text calculation, changing my correct math answer from a `48` into an invalid `126`.
+*   **How I Fixed It:** I added `#pragma pack(push, 1)` right above my structure. This tells the compiler: "Crush all empty space and glue these variables back-to-back with zero gaps."
+*   **Real Results Output:**
+    *   **Data Size in RAM:** Dropped perfectly to exactly **10 Bytes**.
+    *   **Text Loop Math:** Calculated exactly **48** (72 ^ 69 ^ 76 ^ 80 ^ 33).
+    *   **Final Output Key:** Combined `48` with our secret device key (`8699`) to print a clean success number: **8651**.
+
